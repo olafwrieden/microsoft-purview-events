@@ -1,0 +1,21 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "inEvent",
+      "direction": "in",
+      "eventHubName": "purview-events",
+      "connection": "EVENT_HUB_NOTIFICATIONS",
+      "cardinality": "one",
+      "consumerGroup": "$Default"
+    },
+    {
+      "type": "eventHub",
+      "name": "outEvent",
+      "eventHubName": "purview-hooks",
+      "connection": "EVENT_HUB_HOOKS",
+      "direction": "out"
+    }
+  ]
+}
